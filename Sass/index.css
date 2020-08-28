@@ -19,6 +19,11 @@
   --color-foreground: var(--color-white);
 }
 
+/*
+
+   fonts
+
+*/
 @font-face {
   font-family: 'Righteous';
   src: url(/static/fonts/Righteous.ttf) format("truetype");
@@ -34,6 +39,11 @@
   src: url(/static/fonts/Raleway-Bold.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: 'Raleway-light';
+  src: url(/static/fonts/Raleway-Regular.ttf) format("truetype");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -42,6 +52,8 @@ body {
   background-color: var(--color-background);
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 /*
@@ -287,6 +299,10 @@ body {
   margin-top: 50px;
 }
 
+#linkedin {
+  padding-left: 20px;
+}
+
 #insta {
   padding-left: 20px;
 }
@@ -355,14 +371,11 @@ body {
 
 */
 .arrow {
-  position: relative;
-  top: 680px;
-  left: 50%;
+  position: inline-flex;
+  margin-top: 680px;
+  margin-left: 150px;
   width: 40px;
   height: 40px;
-  /**
-   * Dark Arrow Down
-   */
   background-image: url("/images/arrowdown.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -374,9 +387,17 @@ body {
   left: 50%;
   width: 40px;
   height: 40px;
-  /**
-   * Dark Arrow Down
-   */
+  background-image: url("/images/arrowdown.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrow3 {
+  position: relative;
+  top: 50px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
   background-image: url("/images/arrowdown.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -417,25 +438,138 @@ body {
   }
 }
 
+/*
+
+   work
+
+*/
 .werk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 90px;
+  font-size: 60px;
+  color: magenta;
+  font-family: 'Raleway';
+  width: 400px;
+}
+
+.box {
+  border: 2px solid white;
+  margin-top: 100px;
+  width: 70vw;
+  height: 530px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) left no-repeat;
+  background: linear-gradient(white, white) left no-repeat;
+  background-size: 50%;
+}
+
+.havealook {
+  position: absolute;
+  float: left;
+  margin-left: 200px;
+  -webkit-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*
+
+   contact
+
+*/
+.contact {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 300px;
+  margin-top: 260px;
   padding-left: 90px;
+  margin-bottom: 0px;
   font-size: 6vw;
   color: white;
   font-family: 'Raleway';
 }
 
-.contact {
+.sub {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 300px;
   padding-left: 90px;
-  font-size: 6vw;
+  font-size: 20px;
   color: white;
-  font-family: 'Raleway';
+  font-family: 'Raleway-light';
+  font-style: italic;
+}
+
+#section4 a {
+  color: #ff00ee;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  background-image: url(/images/squiggle.gif);
+  background-position: 0 90%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+}
+
+.sub a:hover {
+  background-image: url(/images/squiggle.gif);
+  background-position: 0 100%;
+  background-size: auto 3px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+}
+
+.foot {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  font-family: 'Raleway-light';
+  font-size: 13px;
+}
+
+.panel {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+}
+
+.color-black {
+  background-color: #262627;
+}
+
+.color-blue {
+  background-color: #001aff;
+}
+
+.color-pink {
+  background-color: #ff00f2;
+}
+
+.color-violet {
+  background-color: #9d00e6;
 }
 /*# sourceMappingURL=index.css.map */

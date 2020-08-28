@@ -2,6 +2,9 @@
 
 <head>
    <link rel="stylesheet" href="Sass/index.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="JavaScript/script.js"></script>
+   <title>Jessica Rodgers</title>
 </head>
 
 <body>
@@ -32,6 +35,11 @@
      icons
    -->
    <div class="icons">
+      <div id="lines">
+         <a href="#">
+            <img src="/images/lines.png" width="20" height="20">
+         </a>
+      </div>
       <div id="linkedin">
          <a href="https://www.linkedin.com/in/jessica-rodgers-294659197/">
             <img src="/images/linkedinicon.png" width="20" height="20">
@@ -64,58 +72,92 @@
    <!-- 
      arrow
    -->
-
-   <div class="main" id="section1">
-      <a href="#section2">
-         <div class="arrow bounce"></div>
-      </a>
+   <div class="panel" data-color="black">
+      <div class="main" id="section1">
+         <a href="#section2">
+            <div class="arrow bounce"></div>
+         </a>
+      </div>
    </div>
 
    <!-- 
      abt me
    -->
+   <div class="panel" data-color="blue">
+      <div class="main" id="section2">
+         <p class="abt">
+            20 year old student and digital creator based
+            in Belfast, NI
+         </p>
 
-   <div class="main" id="section2">
-      <p class="abt">
-         20 year old student and digital creator based
-         in Belfast, NI
-      </p>
+         <div class="learnmore">
+            <a href="#">
+               <img src="/images/learnmore.png" width="130"
+               height="130">
+            </a>
+         </div>
 
-      <div class="learnmore">
-         <a href="#">
-            <img src="/images/learnmore.png" width="130"
-            height="130">
+         <a href="#section3">
+            <div class="arrow2 bounce"></div>
          </a>
       </div>
-
-      <a href="#section3">
-         <div class="arrow2 bounce"></div>
-      </a>
-
    </div>
    
    <!-- 
      projects n stuff
    -->
 
-   <div class="main" id="section3">
-      <p class="werk">
-         this is the werk section
-      </p>
-      <a href="#section4">
-         <div class="arrow2 bounce"></div>
-      </a>
+   <div class="panel" data-color="pink">
+      <div class="main" id="section3">
+         <div class="box">
+            <p class="werk">
+               i design things sometimes
+            </p>
+            <div class="havealook">
+               <img src="/images/havealook.png" width="100"
+               height="100">
+            </div>
+         </div>
+         <a href="#section4">
+            <div class="arrow3 bounce"></div>
+         </a>
+      </div>
    </div>
 
    <!-- 
       contact
    -->
+   <div class="panel" data-color="violet">
+      <div class="main" id="section4">
+         <p class="contact">
+            <span>
+               the best way to contact me is by 
+               <a href="#">email</a>*
+            </span>
+         </p>
 
-   <div class="main" id="section4">
-      <p class="contact">
-         contact me :)
-      </p>
+         <p class="sub">
+            <span>
+               *but you can also drop me a message on 
+               <a href="https://www.linkedin.com/in/jessica-rodgers-294659197/">
+                  linkedin</a>
+               or 
+               <a href="https://www.instagram.com/divini_ty/">
+                  instagram</a> ☺
+            </span>
+         </p>
+      </div>
+   </div>
+
+   <!-- 
+      footer
+   -->
+   <div class="foot">
+      <footer>
+         © 2020 Jessica Rodgers
+      </footer>
    </div>
    
+
 </body>
 
