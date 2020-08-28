@@ -1,0 +1,290 @@
+$root: '.c-rainbow';
+
+:root {
+ --color-background: rgb(38, 38, 39);
+ 
+ --axis-x: 3px;
+ --axis-y: 20px;
+ --delay: 15;
+ 
+ --color-black: #000;
+ --color-white: #fff;
+ --color-yellow: #fdd844;
+ --color-yellow2: #d1b12f;
+ --color-orange: #c98716;
+ --color-red: #D14B3D;
+ --color-pink: #ff1bbb;
+ --color-violet: #c234e2;
+ --color-purple:#711386;
+ --color-darkblue: #004b88;
+ --color-blue: #1b67ca;
+ --color-blue2: #429aff;
+ --color-blue3: #2cc3ff;
+ 
+ --color-foreground: var(--color-white);
+}
+
+@font-face {
+   font-family: 'Righteous';
+   src: url(/static/fonts/Righteous.ttf) format('truetype');
+}
+
+@font-face {
+   font-family: 'Oswald';
+   src: url(/static/fonts/Oswald-Bold.ttf) format('truetype');
+}
+
+@font-face {
+   font-family: 'Raleway';
+   src: url(/static/fonts/Raleway-Bold.ttf) format('truetype');
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+ background-color: var(--color-background);
+
+ overflow-x: hidden;
+ overflow-y: scroll;
+}
+
+/*
+
+   rainbow main text
+
+*/
+
+#{$root} {
+ counter-reset: rainbow;
+ 
+ list-style: none;
+ 
+ padding: 0;
+ margin: 0;
+ 
+ &__layer {
+  --text-color: var(--color-foreground);
+  counter-increment: rainbow; 
+  font-size: 7rem;
+  font-family: 'Righteous';
+  color: var(--text-color);
+
+  text-align: center;
+  width: min-content;
+
+  text-shadow:
+     4px 4px 0 rgba(20, 20, 20, 0);
+  
+  animation: rainbow 1.5s ease-in-out infinite;
+  
+  @for $i from 1 through 13 {
+   &:nth-child(#{$i}) {
+    animation-delay: calc( #{$i} / var(--delay) * 1s);
+    left: calc(var(--axis-x) * #{$i});
+    z-index: -#{$i * 10};
+   }
+  }
+  
+  &:not(:first-child) {
+   position: absolute;
+   top: 0;
+  }
+
+  &--white  { --text-color: var(--color-white)}
+  &--yellow { --text-color: var(--color-yellow)}
+  &--yellow2 { --text-color: var(--color-yellow2)}
+  &--orange { --text-color: var(--color-orange)}
+  &--red    { --text-color: var(--color-red)}
+  &--pink { --text-color: var(--color-pink)}
+  &--violet { --text-color: var(--color-violet)}
+  &--purple { --text-color: var(--color-purple)}
+  &--darkblue { --text-color: var(--color-darkblue)}
+  &--blue   { --text-color: var(--color-blue)}
+  &--blue2   { --text-color: var(--color-blue2)}
+  &--blue3   { --text-color: var(--color-blue3)}
+
+ }
+}
+
+@keyframes rainbow {
+ 0%, 100% {
+  transform: translatey(var(--axis-y)); 
+ }
+ 50% {
+  transform: translatey(calc(var(--axis-y) * -1));
+ }
+} 
+
+/*
+
+   logo
+
+*/
+
+.logos {
+   position: absolute;
+}
+
+.logo {
+   display: inline-block;
+
+   margin:60px 0 0 100px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.logo2 {
+   position: inline-block;
+   margin-top: -62px;
+   margin-left: 128px;
+}
+
+/*
+
+   social icons
+
+*/
+
+.icons {
+   display: flex;
+   list-style-type: none;
+   float: right;
+   width: 130px;
+   margin-top: 50px;
+}
+
+#insta {
+   padding-left: 20px;
+}
+
+/*
+
+   abt me 
+
+*/
+
+.abt {
+   display: inline-flex;
+   margin-top: 200px;
+   padding-left: 90px;
+
+   font-size: 6vw;
+   color: white;
+   font-family: 'Raleway';
+}
+
+.learnmore {
+   float: right;
+   margin-top: -90px;
+   margin-right: 100px;
+
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+/*
+
+   scroll
+
+*/
+
+#section1 {
+   height: 100vh;
+}
+
+#section2{
+   height: 100vh;
+}
+
+#section3 {
+   height: 100vh;
+}
+
+#section4 {
+   height: 100vh;
+}
+
+/*
+
+   bouncing arrow
+
+*/
+
+.arrow
+{
+  position: relative;
+  top: 680px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+
+  /**
+   * Dark Arrow Down
+   */
+  background-image: url("/images/arrowdown.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrow2 {
+  position: relative;
+  top: 180px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+
+  /**
+   * Dark Arrow Down
+   */
+  background-image: url("/images/arrowdown.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  
+}
+
+.werk {
+   display: inline-flex;
+   margin-top: 300px;
+   padding-left: 90px;
+
+   font-size: 6vw;
+   color: white;
+   font-family: 'Raleway';
+}
+
+.contact {
+   display: inline-flex;
+   margin-top: 300px;
+   padding-left: 90px;
+
+   font-size: 6vw;
+   color: white;
+   font-family: 'Raleway';
+}
