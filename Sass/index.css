@@ -1,5 +1,5 @@
 :root {
-  --color-background: rgb(38, 38, 39);
+  --color-background: rgb(0, 0, 0);
   --axis-x: 3px;
   --axis-y: 20px;
   --delay: 15;
@@ -11,10 +11,10 @@
   --color-red: #D14B3D;
   --color-pink: #ff1bbb;
   --color-violet: #c234e2;
-  --color-purple:#711386;
-  --color-darkblue: #004b88;
+  --color-purple:#73008d;
+  --color-darkblue: #005091;
   --color-blue: #1b67ca;
-  --color-blue2: #429aff;
+  --color-blue2: #2a8dff;
   --color-blue3: #2cc3ff;
   --color-foreground: var(--color-white);
 }
@@ -295,8 +295,8 @@ body {
   display: flex;
   list-style-type: none;
   float: right;
-  width: 130px;
-  margin-top: 50px;
+  width: 200px;
+  margin-top: 70px;
 }
 
 #linkedin {
@@ -307,41 +307,121 @@ body {
   padding-left: 20px;
 }
 
+.dropbtn {
+  background: none;
+  color: white;
+  padding-left: 20px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-content {
+  display: none;
+  position: absolute;
+  background: none;
+  width: 60px;
+  z-index: 1;
+}
+
+.drop-content a {
+  color: #fff;
+  font-family: 'Raleway';
+  padding: 10px 0 0 0;
+  text-decoration: none;
+  display: block;
+}
+
+.drop-content a:hover {
+  color: var(--color-pink);
+  background-image: url(/images/squiggle.gif);
+  background-position: 0 100%;
+  background-size: auto 3.5px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+}
+
+.dropdown:hover .drop-content {
+  display: block;
+}
+
 /*
 
    abt me 
 
 */
 .abt {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-top: 200px;
-  padding-left: 90px;
-  font-size: 6vw;
-  color: white;
+  position: absolute;
+  padding-left: 12px;
+  margin-top: 10px;
+  width: 380px;
+  font-size: 71px;
+  color: #ff00ea;
   font-family: 'Raleway';
 }
 
-.learnmore {
+.box {
+  border: 2px solid white;
+  margin-top: 100px;
+  margin-right: 500px;
+  width: 400px;
+  height: 530px;
+  background-size: 50%;
+  background-color: white;
+}
+
+.box2 {
+  border: 2px dotted white;
+  position: inline;
   float: right;
-  margin-top: -90px;
-  margin-right: 100px;
-  -webkit-animation: spin 4s linear infinite;
-  animation: spin 4s linear infinite;
+  margin-top: -533px;
+  margin-right: 11px;
+  width: 488px;
+  height: 530px;
 }
 
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
+.box2abt {
+  position: absolute;
+  padding-left: 12px;
+  font-size: 28px;
+  width: 460px;
+  color: white;
+  font-family: 'Raleway-light';
+  text-align: left;
 }
 
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+.abt2 {
+  margin-top: 80px;
+  font-family: 'Raleway';
+}
+
+.school {
+  margin-top: -30px;
+  font-style: italic;
+}
+
+.design {
+  margin-top: 60px;
+  font-family: 'Raleway';
+}
+
+.designdetails {
+  margin-top: -30px;
+  font-style: italic;
+}
+
+.placement {
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.mainabt {
+  color: white;
 }
 
 /*
@@ -365,15 +445,27 @@ body {
   height: 100vh;
 }
 
+#section5 {
+  height: 100vh;
+}
+
+#section6 {
+  height: 100vh;
+}
+
+#section7 {
+  height: 100vh;
+}
+
 /*
 
    bouncing arrow
 
 */
 .arrow {
-  position: inline-flex;
+  position: relative;
   margin-top: 680px;
-  margin-left: 150px;
+  margin-left: 220px;
   width: 40px;
   height: 40px;
   background-image: url("/images/arrowdown.png");
@@ -382,9 +474,9 @@ body {
 }
 
 .arrow2 {
-  position: relative;
-  top: 180px;
-  left: 50%;
+  position: absolute;
+  right: 48%;
+  bottom: -740px;
   width: 40px;
   height: 40px;
   background-image: url("/images/arrowdown.png");
@@ -393,9 +485,20 @@ body {
 }
 
 .arrow3 {
-  position: relative;
-  top: 50px;
-  left: 50%;
+  position: absolute;
+  margin-top: 330px;
+  right: 48%;
+  width: 40px;
+  height: 40px;
+  background-image: url("/images/arrowdown.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrow4 {
+  position: absolute;
+  margin-top: 330px;
+  right: 48%;
   width: 40px;
   height: 40px;
   background-image: url("/images/arrowdown.png");
@@ -443,31 +546,202 @@ body {
    work
 
 */
+.werkbody {
+  display: relative;
+  margin-top: 140px;
+  margin-left: 35px;
+  color: white;
+  width: 750px;
+}
+
 .werk {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 90px;
-  font-size: 60px;
-  color: magenta;
+  font-size: 35px;
   font-family: 'Raleway';
-  width: 400px;
 }
 
-.box {
-  border: 2px solid white;
-  margin-top: 100px;
-  width: 70vw;
-  height: 530px;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) left no-repeat;
-  background: linear-gradient(white, white) left no-repeat;
-  background-size: 50%;
+.werksub {
+  font-size: 25px;
+  font-family: 'Raleway-light';
+  margin-top: -30px;
+  font-style: italic;
 }
 
-.havealook {
+.werk2 {
+  font-size: 35px;
+  font-family: 'Raleway';
+  margin-top: 60px;
+}
+
+.werk2sub {
+  font-size: 25px;
+  font-family: 'Raleway-light';
+  margin-top: -30px;
+  font-style: italic;
+}
+
+#section3 a {
+  text-decoration: none;
+  color: #ff00ea;
+}
+
+#section3 a:hover {
+  background-image: url(/images/squiggle.gif);
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+}
+
+.extraTxt {
+  font-size: 25px;
+  font-family: 'Raleway-light';
+  margin-top: -54px;
+  margin-left: 563px;
+  font-style: italic;
+  color: #ff00ea;
+}
+
+.extra {
   position: absolute;
+  display: none;
+}
+
+.extraTxt:hover .extra {
+  display: inline-block;
+  padding-top: 30px;
+  left: 400px;
+  text-align: left;
+  color: white;
+  font-size: 15px;
+}
+
+.click-here {
+  position: absolute;
+  display: inline-block;
+  right: 140px;
+  margin: -80px 0 0 100px;
+  -webkit-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*
+
+   floating balloon
+
+*/
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-40px);
+            transform: translatey(-40px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-40px);
+            transform: translatey(-40px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.avatar {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  -webkit-transform: translatey(0px);
+          transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+
+.avatar img {
+  width: 100%;
+  height: auto;
+}
+
+/*
+
+   digital art
+
+*/
+#slideshow {
+  overflow: hidden;
+  display: inline-block;
+  height: 760px;
+  width: 438px;
+  margin: -15px 0 0 5px;
+}
+
+.slide-wrapper {
+  width: 2912px;
+  -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
   float: left;
-  margin-left: 200px;
+  height: 766px;
+  width: 438px;
+}
+
+@-webkit-keyframes slide {
+  20% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: -438px;
+  }
+  50% {
+    margin-left: -438px;
+  }
+  60% {
+    margin-left: -876px;
+  }
+  70% {
+    margin-left: -876px;
+  }
+  80% {
+    margin-left: -1314px;
+  }
+  90% {
+    margin-left: -1314px;
+  }
+}
+
+.digital-insta {
+  position: absolute;
+  margin-top: 400px;
+  margin-left: -20px;
   -webkit-animation: spin 4s linear infinite;
   animation: spin 4s linear infinite;
 }
@@ -497,6 +771,7 @@ body {
   margin-top: 260px;
   padding-left: 90px;
   margin-bottom: 0px;
+  width: 80%;
   font-size: 6vw;
   color: white;
   font-family: 'Raleway';
@@ -507,13 +782,14 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding-left: 90px;
+  width: 70%;
   font-size: 20px;
   color: white;
   font-family: 'Raleway-light';
   font-style: italic;
 }
 
-#section4 a {
+#section5 a {
   color: #ff00ee;
   text-decoration: none;
 }
@@ -534,6 +810,11 @@ body {
   text-decoration: none;
 }
 
+/*
+
+   footer
+
+*/
 .foot {
   display: table;
   margin-left: auto;
@@ -557,8 +838,13 @@ body {
   font-family: sans-serif;
 }
 
+/*
+
+   colours
+
+*/
 .color-black {
-  background-color: #262627;
+  background-color: black;
 }
 
 .color-blue {
@@ -571,5 +857,13 @@ body {
 
 .color-violet {
   background-color: #9d00e6;
+}
+
+.color-black {
+  background-color: #000000;
+}
+
+.color-white {
+  background-color: white;
 }
 /*# sourceMappingURL=index.css.map */
