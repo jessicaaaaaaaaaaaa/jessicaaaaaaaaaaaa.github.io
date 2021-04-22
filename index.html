@@ -1,291 +1,157 @@
 <!DOCTYPE html>
-
-<head>
-   <link rel="stylesheet" href="Sass/index.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="JavaScript/script.js"></script>
-   <title>Jessica Rodgers</title>
-</head>
+<html lang="en">
+<title>Jessica Rodgers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="/CSS/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="/JavaScript/script.js"></script> 
 
 <body>
 
-   <!-- 
-      rainbow main text 
-   -->
-      <div class="mainTxt" style="width: 250px; height: 200px;
-      position: absolute; top: 0; bottom: 200px; left: 0; right: 200px;
-      margin: auto;">
-         <ul class="c-rainbow" id="rainbow">
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">make yourself at home</li>
-           </ul>
-      </div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:280px;font-weight:boldest;color: white; background-image: url('/Static/images/bg.png');
+ -webkit-text-stroke: 1px blue;  text-shadow: 4px 4px blue;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:25px;color: white!important;">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b style="font-size: 50px;">Jessica<br>Rodgers</b>
+    </h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
+    font-size: 25px; color: white!important;">Home</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
+    font-size: 25px;color: white!important;">About</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
+    font-size: 25px;color: white!important;">Artwork</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
+    font-size: 25px;color: white!important;">Contact</a>
+    <a href="https://www.linkedin.com/in/jessicaaaa/" class="w3-bar-item w3-button w3-hover-white" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
+    font-size: 25px; color: white!important;margin-top: 70px;"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/j_____essica/" class="w3-bar-item w3-button w3-hover-white" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
+    font-size: 25px;color: white!important;"><i class="fa fa-instagram"></i></a>
+  </div>
+</nav>
 
-   <!-- 
-     links
-   -->
-   <div class="links">
-      <a href="https://www.linkedin.com/in/jessica-rodgers-294659197/"
-      id="linkedin">
-         linkedin
-      </a>
-      <a href="https://www.instagram.com/j_____essica/"
-      id="insta">
-         insta
-      </a>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding" style="background-image: url('/Static/images/bg.png');">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; font-size: 35px;">Jessica Rodgers</span>
+</header>
 
-      <div class="dropdown">
-         <button class="dropbtn">
-            +
-         </button>
-         <div class="drop-content">
-            <a href="#section2" style="width: 47px;">about</a>
-            <a href="#section3" style="width: 72px;">what i do</a>
-            <a href="#section4">artwork</a>
-            <a href="#section5">contact</a>
-         </div>
-      </div>
-   </div>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-   <!-- 
-     arrow
-   -->
-   <div class="panel" data-color="pink">
-      <div class="main" id="section1">
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px;">
 
-         <div class="container2">
-            <div class="me">
-               <div class="hair"></div>
-               <div class="clothes">
-                  <div class="jumper"></div>
-               </div>
-               <div class="neck"></div>
-               <div class="head"><div class="bangs"></div></div>
-            </div>
-            <div class="mouse" ><i class="fa fa-mouse-pointer" aria-hidden="true"></i></div>
-      </div>
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:150px;" id="showcase">
+    <h1 class="w3-jumbo w3-text-blue" style="font-family:'Playfair';margin-bottom: 89px;"><b>Twenty-something 
+      student and digital creator based in Belfast, NI
+    </b>
+  </h1>
+  <hr style="width:50px;border:5px solid blue; margin-bottom: 114px;background-color: blue; z-index: -1" class="w3-round">
+  </div>
 
-         <a href="#section2">
-            <div class="arrow bounce"></div>
-         </a>
-      </div>
-   </div>
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+  <div class="w3-half">
+    <img src="/Static/images/studioghibli.jpg" style="width:100%" onclick="onClick(this)">
+    <img src="/Static/images/cat.jpg" style="width:100%" onclick="onClick(this)">
+    <img src="/Static/images/orng.PNG" style="width:100%" onclick="onClick(this)">
+  </div>
 
-   <!-- 
-     abt me
-   -->
-   <div class="panel" data-color="blue">
-      <div class="main" id="section2"> 
-         
-         <div class="dragons">
-            <img class="dragon" src="/images/artwork/dragon.png"
-            width="800" height="800">
-            <img class="dragon2" src="/images/artwork/dragon2.png"
-            width="900" height="850">
-         </div>
+  <div class="w3-half">
+    <img src="/Static/images/colour.jpg" style="width:100%" onclick="onClick(this)">
+    <img src="/Static/images/bb.jpg" style="width:100%" onclick="onClick(this)">
+    <img src="/Static/images/red.jpg" style="width:100%" onclick="onClick(this)">
+  </div>
+  </div>
 
-         <div class="abt">
-            <p>
-               20 year old student and digital creator
-               based in Belfast, NI
-            </p>
-         </div>
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
 
-         <a href="#section3">
-            <div class="arrow2 bounce"></div>
-         </a>
-      </div>
-   </div>
-   
-   <!-- 
-     projects n stuff
-   -->
+    <!-- Artwork -->
+    <div class="w3-container" id="designers" style="margin-top: 70px;">
+      <hr style="width:50px;border:5px solid blue; background-color: blue;margin-bottom: 100px; margin-top: 80px;" class="w3-round">
+      <h1 class="w3-jumbo w3-text-blue" style="font-family:'Playfair';">"Talent is a pursued interest. 
+        Anything that you’re willing to practice, you can do."
+      <p class="w3-xxxlarge" style="margin-bottom: 70px; margin-top: -90px;text-align: right;"><br>━━ Bob Ross</p>
+      </h1>
+  
+      <hr style="width:50px;border:5px solid blue;background-color: blue;z-index: -1" class="w3-round">
+  
+    </div>
 
-   <div class="panel" data-color="pink">
-      <div class="main" id="section3">
+  <!-- About -->
+  <div class="w3-container" id="services">
+    <h1 class="w3-medium w3-text-blue" style="margin-top: 110px; border: 1px solid; font-family: 'Raleway-light'; padding: 50px; height:min-content;">
+      Hi, I'm Jessica ☻
+      <p style=" text-align: justify; margin-bottom: 0px;">I'm a 21 year old student, finishing up a BSc Computer Science degree at
+        Queen's University Belfast. The technical nature of my degree has allowed me to refine
+        my problem solving and critical thinking skills, which I'm constantly utilising in all
+        of my design projects.
+        <br><br> I have a huge adoration for all areas of design, with a particular love for digital
+        illustration, front-end development and web design. Have a look at some of my more specific skills listed below:
+      </p>
+      </h1>
+  </div>
+  <!-- Skills -->
+  <div class="w3-container" id="services" style="margin-top: -18px;">
+    <h1 class="w3-medium w3-text-white" style="border: 1px solid blue; background-color: blue; font-family: 'Raleway-light';padding: 30px;height:min-content;">
+    Skills
+    <p class="w3-small" style="margin-bottom: 0px; text-align: center;">✦ HTML ✦ CSS/SASS ✦ JavaScript 
+      ✦ Python ✦ Wireframing ✦ User Experience ✦ Prototyping <br> ✦ Agile Development 
+      ✦ Responsive Design</p>
+    </h1>
+  </div>
+  <!-- Softare -->
+  <div class="w3-container" id="services" style="margin-top: -18px;">
+    <h1 class="w3-medium w3-text-white" style="border: 1px solid blue; background-color: blue; font-family: 'Raleway-light';padding: 30px;height:min-content;">
+    Software
+    <p class="w3-small" style="margin-bottom: 0px; margin-top: 0px;text-align: center;">✦ Visual Studio Code 
+      ✦ Google Colab ✦ Git ✦ Illustrator ✦ Photoshop ✦ Sketch</p>
+    </h1>
 
-         <div class="werkbody">
-            <p class="werk">
-               i adore working traditionally, but have been steadily
-               transitioning to digital work over the past few years<br>
-               <p class="werksub">
-                  currently my main focus is <a href="#section4">digital illustration</a> and
-                  <p class="extraTxt"> web design <span class="extra">
-                     ☺ i designed and created this entire website myself ☺</span></p>
-               </p>
-            </p>
-               </p>
-         </div>
+    <hr style="width:50px;border:5px solid blue; margin-top: 128px;background-color: blue;z-index: -1" class="w3-round">
 
-         <div class="click-here">
-            <img src="/images/havealook.png" width="120"
-               height="120">
-            </div>
-         </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-bottom:70px;margin-top: 70px;">
+    <h1 class="w3-xxxlarge w3-text-blue" style="margin-top: 40px; text-align: center;  
+    border: 1px solid blue; padding: 50px;">
+      <b class="contact">
+        The best way to contact me is by email*
+        <p class="w3-large" style="margin-top: -10px;
+        font-family: 'Raleway-light'; font-style: italic;">*but you can also drop me a message on linkedin or instagram</p>
+        
+        <div class="icons" style="font-size: 30px; margin-bottom: 20px; word-spacing: 20px;">
+          <a href="mailto:jessicaarodgerss@gmail.com"><i class="fa fa-envelope" 
+            style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; color: white;"></i></a>
+          <a href="https://www.linkedin.com/in/jessicaaaa/"><i class="fa fa-linkedin"
+            style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; color: white;"></i></a>
+          <a href="https://www.instagram.com/j_____essica/"><i class="fa fa-instagram"
+            style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; color: white;"></i></a>
+        </div>
 
-         <!-- 
-            floating balloon
-         -->
+        <p class="w3-large" style="margin-top: -10px;
+        font-family: 'Raleway-light';"><i class="fa fa-circle" style="font-size: 10px; color: #21e69e;
+        margin-right: 10px;"></i>Available for freelance projects</p>
+      </b>
+    </h1>
+  </div>
 
-         <div class="container">
-            <div class="avatar">
-               <a href="https://www.instagram.com/p/CCbCQB7n0UC/">
-                  <img src="/images/balloons.png" alt="balloons" />
-               </a>
-            </div>
-         </div>
-               
-         <a href="#section4">
-            <div class="arrow3 bounce"></div>
-         </a>
-      </div>
-
-   <!-- 
-      digital work
-   -->
-   <div class="panel" data-color="blue">
-      <div class="main" id="section4">
-
-         <div class="line">
-            <img src="/images/line.png">
-         </div>
-
-         <div class="box" style="
-         position: absolute; background: pink; width: 450px; 
-         height: 600px; margin-left: -100px; margin-top: 65px">
-            <div id="slideshow">
-               <div class="slide-wrapper">
-               <div class="slide">
-                  <h1 class="slide-number">
-                     <a href="https://www.instagram.com/p/CB0R6mVFNCb/">
-                        <img class="img" src="/images/artwork/red.jpg" width="438"
-                        height="587">
-                     </a>
-                  </h1>
-                  </div>
-               <div class="slide">
-                  <h1 class="slide-number">
-                     <a href="https://www.instagram.com/p/CEmUXxZnpwJ/">
-                        <img class="img" src="/images/artwork/colour.png" width="438"
-                        height="587">
-                        </a>
-                  </h1>
-                  </div>
-               <div class="slide">
-                  <h1 class="slide-number">
-                     <a href="https://www.instagram.com/p/CB-mm7SHGa2/">
-                        <img class="img" src="/images/artwork/girl.jpg" width="438"
-                        height="587">
-                     </a>
-                  </h1>
-                  </div>
-               <div class="slide">
-                  <h1 class="slide-number">
-                     <a href="https://www.instagram.com/p/CEAF4DWn64P/">
-                        <img class="img" src="/images/artwork/shes-blue.png" width="470"
-                        height="587">
-                     </a>
-                  </h1>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <div class="box" style=" position: absolute; background: pink; 
-         width: 450px; height: 600px; margin-left: 428px; 
-         margin-top: 65px">
-            <div id="slideshow">
-               <div class="slide-wrapper">
-               <div class="slide">
-                  <h1 class="slide-number">
-                     <a href="https://www.instagram.com/p/CB0R6mVFNCb/">
-                        <img class="img" src="/images/artwork/balloon.png" width="438"
-                        height="587">
-                     </a>
-                  </h1>
-                  </div>
-               <div class="slide">
-                  <h1 class="slide-number">
-                     <a href="https://www.instagram.com/p/CEmUXxZnpwJ/">
-                        <img class="img" src="/images/artwork/frog.png" width="438"
-                        height="587">
-                        </a>
-                  </h1>
-                  </div>
-               <div class="slide">
-                  <h1 class="slide-number">
-                     <a href="https://www.instagram.com/p/CB-mm7SHGa2/">
-                        <img class="img" src="/images/artwork/sketch.png" width="438"
-                        height="587">
-                     </a>
-                  </h1>
-                  </div>
-               <div class="slide">
-                  <h1 class="slide-number">
-                     <a href="https://www.instagram.com/p/CEAF4DWn64P/">
-                        <img class="img" src="/images/artwork/shevsBlue.png" width="438"
-                        height="587">
-                     </a>
-                  </h1>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <div class="digital-insta">
-         <a href="https://www.instagram.com/j_____essica/">
-            <img src="/images/clickformore.png" width="140"
-            height="140">
-         </a>
-      </div>
-
-      <a href="#section5">
-         <div class="arrow4 bounce"></div>
-      </a>
-   </div>
-
-   <!-- 
-      contact
-   -->
-   <div class="panel" data-color="pink">
-      <div class="main" id="section5">
-
-         <div class="dot">
-            <img class="dots" width="600" height="600"
-            src="/images/artwork/dots.PNG">
-            <img class="dots2" width="500" height="500"
-            src="/images/artwork/dots2.png">
-         </div>
-         <p class="contact">
-            <span>
-               the best way to contact me is by 
-               <a href="mailto:jessicaarodgerss@gmail.com">email</a>*
-            </span>
-         </p>
-
-         <p class="sub">
-            <span>
-               *but you can also drop me a message on 
-               <a href="https://www.linkedin.com/in/jessica-rodgers-294659197/">
-                  linkedin</a>
-               or 
-               <a href="https://www.instagram.com/j_____essica/">
-                  instagram</a>
-            </span>
-         </p>
-      </div>
-   </div>
+<!-- End page content -->
+</div>
 
 </body>
-
+</html>
