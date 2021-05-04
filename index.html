@@ -5,46 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="CSS\style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
-<link rel="shortcut icon" type="image/jpg" href="./images/shevsBlue.png"/>
+<link rel="shortcut icon" type="image/jpg" href="./images/favicon.png"/>
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 <script src="/JavaScript/script.js"></script> 
 
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:280px;font-weight:boldest;color: white; background-image: url('/images/bg.png');
- -webkit-text-stroke: 1px blue;  text-shadow: 4px 4px blue;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:280px;font-weight:boldest;color: white;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:25px;color: white!important;
-  text-shadow: 2px 2px blue; font-weight: 900;">Close Menu</a>
+  font-weight: 900;"></a>
   <div class="w3-container">
-    <h3 class="w3-padding-64"><b style="font-size: 50px;">Jessica<br>Rodgers</b>
+    <h3 class="w3-padding-64" style="position: absolute; top: 0;">
+      <img src="./images/name.png" height="80" width="230">
     </h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-none" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
-    font-size: 28px; color: white!important; font-family: 'Raleway'; font-weight: bold;">Home</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-none" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
-    font-size: 28px;color: white!important;font-family: 'Raleway'; font-weight: bold;">About</a> 
-    <a href="#artwork" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-none" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
-    font-size: 28px;color: white!important;font-family: 'Raleway'; font-weight: bold;">Artwork</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-none" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
-    font-size: 28px;color: white!important;font-family: 'Raleway'; font-weight: bold;">Contact</a>
-    <a href="https://www.linkedin.com/in/jessicaaaa/" class="w3-bar-item w3-button w3-hover-none" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
-    font-size: 28px; color: white!important;margin-top: 40px;font-family: 'Raleway'; font-weight: bold;"><i class="fa fa-linkedin"></i></a>
-    <a href="https://www.instagram.com/j_____essica/" class="w3-bar-item w3-button w3-hover-none" style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; 
-    font-size: 28px;color: white!important;"><i class="fa fa-instagram"></i></a>
+    <ul style="list-style-type: none; position: absolute; bottom:68%; left: 15%;">
+      <li style="display: inline-block;"><a href="https://www.linkedin.com/in/jessicaaaa/" class="w3-bar-item w3-button w3-hover-none" style="color: black;"><i class="fab fa-linkedin"></i></a></li>
+      <li style="display: inline-block;"><a href="https://www.instagram.com/j_____essica/" class="w3-bar-item w3-button w3-hover-none" style="color: black;"><i class="fab fa-instagram"></i></a></li>
+      <li style="display: inline-block;"><a href="https://www.pinterest.co.uk/DlVINITY/" class="w3-bar-item w3-button w3-hover-none" style="color: black;"><i class="fab fa-pinterest"></i></a></li>
+    </ul>  
   </div>
 </nav>
 
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding" style="background-image: url('/images/bg.png');">
-  <a href="javascript:void(0)" class=" w3-margin-right" onclick="w3_open()">
-    <i class="fa fa-bars" style="color: white;-webkit-text-stroke: 1px blue;font-size: 30px;text-shadow: 2.5px 2.5px blue;"></i>
-  </a>
-  <span style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; font-size: 34px; font-weight: 900 ;">Jessica Rodgers</span>
+<header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding">
+  <span>
+  <img src="./images/name2.png" height="80" width="220">
+  </span>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -52,15 +44,6 @@
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px;">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:150px;" id="showcase">
-    <h1 class=" w3-text-blue" style="font-family:'Playfair Display'; font-style: italic;margin-bottom: 89px; font-size: 70px;"><b>Twenty-something 
-      student and digital creator based in Belfast, NI
-    </b>
-  </h1>
-  <hr style="width:50px;border:5px solid blue; margin-bottom: 114px;background-color: blue; z-index: -1" class="w3-round">
-  </div>
 
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding" id="artwork">
@@ -78,76 +61,74 @@
   </div>
 
   <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+  <div id="modal01" class="w3-modal" style="padding-top:25px" onclick="this.style.display='none'">
+    <span class="w3-button w3-xxlarge w3-display-topright" 
+    style="color: white;">
+    ✹</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
-      <p id="caption"></p>
     </div>
   </div>
 
-    <!-- Artwork -->
-    <div class="w3-container" id="designers" style="margin-top: 70px;">
-      <hr style="width:50px;border:5px solid blue; background-color: blue;margin-bottom: 100px; margin-top: 80px;" class="w3-round">
-      <h1 class="w3-jumbo w3-text-blue" style="font-family:'Playfair Display';font-style: italic;font-weight: boldest;">"Talent is a pursued interest. 
-        Anything that you’re willing to practice, you can do."
-      <p class="w3-xxxlarge" style="margin-bottom: 70px; margin-top: -90px;text-align: right;"><br>━━ Bob Ross</p>
-      </h1>
-  
-      <hr style="width:50px;border:5px solid blue;background-color: blue;z-index: -1" class="w3-round">
-  
-    </div>
+  <div class="digital-insta">
+    <a href="https://www.instagram.com/j_____essica/">
+       <img src="./images/click.png" width="140"
+       height="132">
+    </a>
+ </div>
 
   <!-- About -->
   <div class="w3-container" id="services">
-    <h1 class="w3-medium w3-text-blue" style="margin-top: 110px; border: 1px solid; font-family: 'Raleway'; padding: 30px; height:min-content;">
-      Hi, I'm Jessica ☻
-      <p style=" text-align: justify; margin-bottom: 0px;">I'm a 21 year old student, finishing up a BSc Computer Science degree at
-        Queen's University Belfast. The technical nature of my degree has allowed me to refine
-        my problem solving and critical thinking skills, which I'm constantly utilising in all
-        of my design projects.
-        <br><br> I have a huge adoration for all areas of design, with a particular love for digital
-        illustration, front-end development and web design. Have a look at some of my more specific skills listed below:
-      </p>
+    <h1 class="w3-xxlarge w3-text-black" style="text-align: center; margin-bottom: -10px; margin-top: 50px;">︱</h1>
+    <h1 class="w3-xxxlarge w3-text-black" style="text-align: center;margin-bottom: -10px;">✹</h1>
+    <h1 class="w3-xxlarge w3-text-black" style="text-align: center; margin-bottom: 50px;">︱</h1>
+    <h1 class="w3-medium w3-text-black" style="font-family: 'Raleway'; padding: 30px 30px 10px 30px; 
+    background-image: url(./images/banner3.png); background-repeat: no-repeat; background-size: cover;">
+      Jessica Rodgers is a Web Designer & Front-End Developer based in 
+      Belfast, NI. Currently finishing up a Bachelor of Science in Computer 
+      Science from Queen's University Belfast and expects to graduate in 
+      July '21.
+
+      <p style=" text-align: justify; margin-bottom: 0px;">
+        </p>
       </h1>
   </div>
   <!-- Skills -->
   <div class="w3-container" id="services" style="margin-top: -18px;">
-    <h1 class="w3-medium w3-text-white" style="border: 1px solid blue; background-color: blue; font-family: 'Raleway';padding: 30px;height:min-content;">
+    <h1 class="w3-medium w3-text-black" style="background-image: url(./images/banner1.png); background-repeat: no-repeat; background-size: cover;font-family: 'Raleway';padding: 30px;height:min-content;">
     Skills
-    <p class="w3-small" style="margin-bottom: 0px; text-align: center;">✦ HTML ✦ CSS/SASS ✦ JavaScript 
-      ✦ Python ✦ Wireframing ✦ User Experience ✦ Prototyping <br> ✦ Agile Development 
-      ✦ Responsive Design</p>
+    <p class="w3-small" style="margin-bottom: 0px; text-align: center;">✹ HTML ✹ CSS/SASS ✹ JavaScript 
+      ✹ Python ✹ Wireframing ✹ User Experience ✹ Prototyping <br> ✹ Agile Development 
+      ✹ Responsive Design</p>
     </h1>
   </div>
   <!-- Softare -->
   <div class="w3-container" id="services" style="margin-top: -18px;">
-    <h1 class="w3-medium w3-text-white" style="border: 1px solid blue; background-color: blue; font-family: 'Raleway';padding: 30px;height:min-content;">
+    <h1 class="w3-medium w3-text-black" style="background-image: url(./images/banner2.png); background-repeat: no-repeat; background-size: cover; font-family: 'Raleway';padding: 30px;height:min-content;">
     Software
-    <p class="w3-small" style="margin-bottom: 0px; margin-top: 0px;text-align: center;">✦ Visual Studio Code 
-      ✦ Google Colab ✦ Git ✦ Illustrator ✦ Photoshop ✦ Sketch</p>
+    <p class="w3-small" style="margin-bottom: 0px; margin-top: 0px;text-align: center;">✹ Visual Studio Code 
+      ✹ Google Colab ✹ Git ✹ Illustrator ✹ Photoshop ✹ Sketch</p>
     </h1>
-
-    <hr style="width:50px;border:5px solid blue; margin-top: 128px;background-color: blue;z-index: -1" class="w3-round">
-
   </div>
   
   <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-bottom:70px;margin-top: 70px;">
-    <h1 class="w3-xxxlarge w3-text-blue" style="margin-top: 40px; text-align: center;  
-    border: 1px solid blue; padding: 30px;">
+  <div class="w3-container" id="contact">
+    <h1 class="w3-xxlarge w3-text-black" style="text-align: center; margin-bottom: -10px; margin-top: 50px;">︱</h1>
+    <h1 class="w3-xxxlarge w3-text-black" style="text-align: center;margin-bottom: -10px;">✹</h1>
+    <h1 class="w3-xxlarge w3-text-black" style="text-align: center; margin-bottom: 50px;">︱</h1>
+    <h1 class="w3-xxxlarge w3-text-black" style="margin-top: 40px; text-align: center;">
       <b class="contact">
-        The best way to contact me is by email*
+        The best way to get in touch is by email
         <p class="w3-large" style=" margin-top: -5px;
-        font-family: 'Raleway'; font-style: italic;">*but you can also drop me a message on linkedin or instagram<br></p>
+        font-family: 'Raleway'; font-style: italic;">but you can also drop a message on linkedin or instagram<br></p>
         
         <div class="icons" style="font-size: 30px; margin-bottom: 20px; word-spacing: 20px;">
-          <a href="mailto:jessicaarodgerss@gmail.com"><i class="fa fa-envelope" 
-            style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; color: white;"></i></a>
-          <a href="https://www.linkedin.com/in/jessicaaaa/"><i class="fa fa-linkedin"
-            style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; color: white;"></i></a>
-          <a href="https://www.instagram.com/j_____essica/"><i class="fa fa-instagram"
-            style="-webkit-text-stroke: 1px blue;  text-shadow: 2.5px 2.5px blue; color: white;"></i></a>
+          <a href="mailto:jessicaarodgerss@gmail.com"><i class="far fa-paper-plane" 
+            style=" color: black;"></i></a>
+          <a href="https://www.linkedin.com/in/jessicaaaa/"><i class="fab fa-linkedin"
+            style=" color: black;"></i></a>
+          <a href="https://www.instagram.com/j_____essica/"><i class="fab fa-instagram"
+            style=" color: black;"></i></a>
         </div>
 
         <p class="w3-large" style="margin-top: -10px;
@@ -155,6 +136,15 @@
         margin-right: 10px;"></i>Available for freelance projects</p>
       </b>
     </h1>
+    
+
+    <div class="w3-container">
+      <h1 class="w3-text-black" style="font-weight: bolder; font-size: 10px; font-family: 'Raleway';
+       text-align: center; margin-top: 50px;">
+        © 2021, Jessica Rodgers.
+      </h1>
+    </div>
+
   </div>
 
 <!-- End page content -->
