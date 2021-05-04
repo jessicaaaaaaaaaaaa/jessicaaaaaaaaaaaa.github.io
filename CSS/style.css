@@ -29,7 +29,7 @@ body, h1, h2, h3, h4, h5 {
 
 body {
     font-size: 16px;
-    background-image: url('/images/bg.png');
+    background-image: url('/images/bg-min.png');
     background-repeat:no-repeat;
     background-size: cover;
 }
